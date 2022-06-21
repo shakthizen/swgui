@@ -1,19 +1,15 @@
 import React from "react";
 import { AppBar as MUIAppBar, Box, Toolbar, Typography } from "@mui/material";
 
-type Props = {};
+type Props = { title?: string };
 
-const AppBar = (props: Props) => {
+const AppBar = ({ title }: Props) => {
   return (
-    <Box flex={1}>
-      <MUIAppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Star Wars GUI
-          </Typography>
-        </Toolbar>
-      </MUIAppBar>
-    </Box>
+    <MUIAppBar position="static">
+      <Toolbar>
+        <Typography variant="h6">{title}</Typography>
+      </Toolbar>
+    </MUIAppBar>
   );
 };
 
